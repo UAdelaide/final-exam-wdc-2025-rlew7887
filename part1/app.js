@@ -149,11 +149,11 @@ let db;
 // route to list all dogs
 app.get('/api/dogs', async (req, res) => {
   try {
-    const [dogs] = await db.execute('
+    const [dogs] = await db.execute(`
         SELECT d.name, d.size, u.username
         FROM Dogs d
         JOIN Users u on d.owner_id = u.user_id
-        ');
+        `);
     res.json(dogs);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
