@@ -114,7 +114,7 @@ let db;
       `);
       await db.execute(`
         INSERT INTO Dogs (owner_id, name, size) VALUES
-            ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
+            (1, 'Max', 'medium'),
             ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
             ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Jacob', 'large'),
             ((SELECT user_id FROM Users WHERE username = 'george123'), 'Milo', 'medium'),
