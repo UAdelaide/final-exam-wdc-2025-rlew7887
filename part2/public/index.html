@@ -74,6 +74,8 @@
             })
           );
           dogs.value = updatedDogs;
+        } catch (err) {
+          console.error('Failed to load dogs or images')
         }
       }
     }).mount('#app');
