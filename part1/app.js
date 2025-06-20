@@ -178,7 +178,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 // route to return walker summary
 app.get('/api/walkers/summary', async (req, res) => {
-    try {} catch {}
+    try {} catch {res.status(500).json({ error: 'Failed to fetch walker summary' });}
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
