@@ -177,6 +177,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 });
 
 // route to return walker summary
+app.get()
 
 app.use(express.static(path.join(__dirname, 'public')));
 
