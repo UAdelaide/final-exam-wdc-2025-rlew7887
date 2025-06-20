@@ -150,7 +150,8 @@ let db;
 app.get('/api/dogs', async (req, res) => {
   try {
     const [dogs] = await db.execute('
-        SELECT d.name AS dogName, d.size AS 
+        SELECT d.name, d.size, u.username
+        
         ');
     res.json(dogs);
   } catch (err) {
