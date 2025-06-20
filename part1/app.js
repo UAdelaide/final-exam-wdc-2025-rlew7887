@@ -131,7 +131,7 @@ let db;
       await db.execute(`
         INSERT INTO WalkApplications (request_id, walker_id, status) VALUES
             (1, 2, 'pending'),
-            (2, 4, ''bobwalker', 'bob@example.com', 'hashed456', 'walker'),
+            (2, 4, 'accepted'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner'),
             ('sarahwalker', 'sarah@example.com', 'hashed111', 'walker'),
             ('george123', 'george@example.com', 'hashed321', 'owner')
