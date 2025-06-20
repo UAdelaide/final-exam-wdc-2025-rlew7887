@@ -25,7 +25,13 @@
       <p class="text-danger mt-3" v-if="error">{{ error }}</p>
     </form>
     <!--Dogs table-->
-    <table class="table table-bordered table-striped mt-3" v-if=""
+    <table class="table table-bordered table-striped mt-3" v-if="dogs.length">
+      <thead>
+        <tr>
+          <th>Photo</th>
+        </tr>
+      </thead>
+    </table>
   </div>
 
   <script>
