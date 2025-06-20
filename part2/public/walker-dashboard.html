@@ -76,14 +76,14 @@
         }
 
         async function getCurrentUser() {
-  try {
-    const res = await fetch('/api/users/me');
-    if (!res.ok) throw new Error('User not logged in');
-    currentUser.value = await res.json();
-  } catch (err) {
-    error.value = 'Failed to get user session';
-  }
-}
+          try {
+            const res = await fetch('/api/users/me');
+            if (!res.ok) throw new Error('User not logged in');
+            currentUser.value = await res.json();
+          } catch (err) {
+            error.value = 'Failed to get user session';
+          }
+        }
 
         async function logout() {
           try {
