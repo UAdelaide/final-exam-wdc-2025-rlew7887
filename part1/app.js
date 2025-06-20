@@ -163,7 +163,7 @@ app.get('/api/dogs', async (req, res) => {
 // route to return all open walk requests
 app.get('/api/walkrequests/open', async (req, res) => {
     try{
-        const
+        const [requests] = await db.execute
     } catch {res.status(500).json({ error: 'Failed to fetch walk requests' });}
 });
 
