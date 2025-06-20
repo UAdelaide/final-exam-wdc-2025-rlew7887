@@ -148,7 +148,7 @@ let db;
 
 // route to list all dogs
 // route to return all open walk requests
-//
+// return walker summary
 
 app.use(express.static(path.join(__dirname, 'public')));
 
