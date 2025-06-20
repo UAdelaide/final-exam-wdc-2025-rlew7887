@@ -36,47 +36,47 @@
         const error = ref('');
         const dogs = ref([]);
 
-      async function login() {
-        try {
-          const res = await fetch('/api/users/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username: this.username, password: this.password })
-          });
-          const data = await res.json();
-          if (data.success) {
-            if (data.user.role === 'owner') {
-              window.location.href = 'owner-dashboard.html';
-            } else if (data.user.role === 'walker') {
-              window.location.href = 'walker-dashboard.html';
+        async function login() {
+          try {
+            const res = await fetch('/api/users/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ username: this.username, password: this.password })
+            });
+            const data = await res.json();
+            if (data.success) {
+              if (data.user.role === 'owner') {
+                window.location.href = 'owner-dashboard.html';
+              } else if (data.user.role === 'walker') {
+                window.location.href = 'walker-dashboard.html';
+              }
+            } else {
+              this.error = data.message || 'Login failed';
             }
-          } else {
-            this.error = data.message || 'Login failed';
+          } catch (err) {
+            this.error = 'An error occurred during login.';
           }
-        } catch (err) {
-          this.error = 'An error occurred during login.';
         }
-      }
 
-      async function loadDogPhotos() {
-        try {
-          const res = await fetch('/api/users/api/dogs');
-          const dogList = await res.json;
-          const updatedDogs = await Promise.all(
-            dogList.map(async dog => {
-              const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
-              const imgData = await imgRes.json();
-              return {
-                ...dog,
-                photo: imgData.message
-              };
-            })
-          );
-          dogs.value = updatedDogs;
-        } catch (err) {
-          console.error('Failed to load dogs or images: ', err);
+        async function loadDogPhotos() {
+          try {
+            const res = await fetch('/api/users/api/dogs');
+            const dogList = await res.json;
+            const updatedDogs = await Promise.all(
+              dogList.map(async dog => {
+                const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
+                const imgData = await imgRes.json();
+                return {
+                  ...dog,
+                  photo: imgData.message
+                };
+              })
+            );
+            dogs.value = updatedDogs;
+          } catch (err) {
+            console.error('Failed to load dogs or images: ', err);
+          }
         }
-      }
 
       onMounted(() => {
         loadDogPhotos();
