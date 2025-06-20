@@ -82,6 +82,14 @@
       onMounted(() => {
         loadDogPhotos();
       });
+
+      return {
+        message,
+        username,
+        password,
+        error,
+        
+      }
     }).mount('#app');
   </script>
 
