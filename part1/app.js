@@ -197,8 +197,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             GROUP BY u.user_id
             `);
         res.json(summary);
-    } catch (err) {
-        console.error(err);
+    } catch {
         res.status(500).json({ error: 'Failed to fetch walker summary' });
     }
 });
