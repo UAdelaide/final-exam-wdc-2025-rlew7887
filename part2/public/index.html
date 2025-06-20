@@ -79,7 +79,9 @@
         }
       }
 
-      onMounted(())
+      onMounted(() => {
+        loadDogPhotos();
+      });
     }).mount('#app');
   </script>
 
