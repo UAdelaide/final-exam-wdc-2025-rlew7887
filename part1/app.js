@@ -146,7 +146,9 @@ let db;
   }
 })();
 
-// rout
+// route to list all dogs
+// route to return all open walk requests
+//
 
 app.use(express.static(path.join(__dirname, 'public')));
 
