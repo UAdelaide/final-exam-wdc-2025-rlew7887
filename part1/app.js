@@ -147,7 +147,9 @@ let db;
 })();
 
 // route to list all dogs
-app.get('/api/dogs')
+app.get('/api/dogs', async (req, res) => {
+  try {
+)
 
 // route to return all open walk requests
 
