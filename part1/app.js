@@ -138,7 +138,7 @@ let db;
       `);
       await db.execute(`
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
-            (4, 2, 5, 5, 'E'),
+            (4, 2, 5, 5, 'Excellent walk! Very punctual and friendly'),
             ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner'),
             ('sarahwalker', 'sarah@example.com', 'hashed111', 'walker'),
