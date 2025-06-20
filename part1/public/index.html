@@ -5,6 +5,49 @@
     <title>Dog of the Day</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+    body {
+      background: linear-gradient(45deg, red, yellow, blue, green);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      animation: spin 10s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    .container {
+      margin: 50px;
+      text-align: center;
+      transform: rotate(-2deg);
+    }
+
+    .dog-image {
+      width: 300px;
+      height: 300px;
+      border: 10px dashed hotpink;
+    }
+
+    .tiny-button {
+      font-size: 10px;
+      padding: 3px;
+    }
+
+    .label {
+      color: yellow;
+      background: white;
+    }
+
+    input {
+      margin-top: 10px;
+      width: 500px;
+    }
+
+    .hidden-text {
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
