@@ -141,6 +141,7 @@ let db;
       await db.execute(`
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
             (4, 2, 5, 5, 'Excellent walk! Very punctual and friendly')
+            ()
       `);
     }
   } catch (err) {
