@@ -178,7 +178,18 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 // route to return walker summary
 app.get('/api/walkers/summary', async (req, res) => {
-    try {} catch {res.status(500).json({ error: 'Failed to fetch walker summary' });}
+    try {
+        const [requests] = await db.execute(`
+            SELECT r.request_id, d.name AS dog_name, r.requested_time, r.duration_minutes, r.location, u.username AS owner_username
+            FROM WalkRequests r
+            JOIN Dogs d ON r.dog_id = d.dog_id
+            JOIN Users u ON d.owner_id = u.user_id
+            WHERE r.status = 'open'
+            `);
+        res.json(requests);
+    } catch {
+        res.status(500).json({ error: 'Failed to fetch walker summary' });
+    }
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
