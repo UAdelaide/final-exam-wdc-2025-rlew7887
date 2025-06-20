@@ -134,7 +134,7 @@ let db;
             (2, 4, 'accepted'),
             (3, 4, 'rejected'),
             (4, 2, 'accepted'),
-            (5, 4, 'george123', 'george@example.com', 'hashed321', 'owner')
+            (5, 4, 'pending')
       `);
       await db.execute(`
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
