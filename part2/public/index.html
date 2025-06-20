@@ -33,12 +33,11 @@
         const message = ref('Welcome to the Dog Walking Service!');
         const username = ref('');
         const password = ref('');
-       const error = ref('');
+        const error = ref('');
         const dogs = ref([]);
         };
       },
-      methods: {
-        async login() {
+        async function login() {
           try {
             const res = await fetch('/api/users/login', {
               method: 'POST',
