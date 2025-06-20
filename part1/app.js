@@ -125,8 +125,8 @@ let db;
             (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
             (2, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
             (3, '2025-06-10 10:00:00', 45, 'Forks Trail', 'cancelled'),
-            ((SELECT dog_id FROM Dogs WHERE name = 'Milo'), '2025-06-09 08:30:00', 30, 'Central Park', 'completed'),
-            ((SELECT dog_id FROM Dogs WHERE name = 'Edward'), '2025-06-11 17:00:00', 60, 'Gardens', 'open')
+            (4, '2025-06-09 08:30:00', 30, 'Central Park', 'completed'),
+            (5, '2025-06-11 17:00:00', 60, 'Gardens', 'open')
       `);
       await db.execute(`
         INSERT INTO Users (username, email, password_hash, role) VALUES
