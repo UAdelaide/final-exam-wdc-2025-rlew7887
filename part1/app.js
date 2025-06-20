@@ -174,7 +174,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
             WHERE r.status = 'open'
             `);
         res.json(requests);
-    } catch {
+    } catch (err) {
         res.status(500).json({ error: 'Failed to fetch walk requests' });
     }
 });
@@ -197,7 +197,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             GROUP BY u.user_id
             `);
         res.json(summary);
-    } catch {
+    } catch (err) {
         res.status(500).json({ error: 'Failed to fetch walker summary' });
     }
 });
