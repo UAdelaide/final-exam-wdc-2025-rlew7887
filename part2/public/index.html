@@ -65,7 +65,7 @@
           const dogList = await res.json;
           const updatedDogs = await Promise.all(
             dogList.map(async dog => {
-              const imgRes = await fetch();
+              const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
             })
           )
         }
