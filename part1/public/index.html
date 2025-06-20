@@ -44,8 +44,10 @@
                 .then(data => {
                 this.dogImage = data.message;
                 });
-                
-                }
+                .catch(err => {
+                    console.error("Error fetching dog image:", err);
+                });
+            }
         }
     }).mount('#app');
     </script>
