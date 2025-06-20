@@ -132,7 +132,7 @@ let db;
         INSERT INTO WalkApplications (request_id, walker_id, status) VALUES
             (1, 2, 'pending'),
             (2, 4, 'accepted'),
-            ('carol123', 'carol@example.com', 'hashed789', 'owner'),
+            (3, 4, 'rejected'),
             ('sarahwalker', 'sarah@example.com', 'hashed111', 'walker'),
             ('george123', 'george@example.com', 'hashed321', 'owner')
       `);
