@@ -115,10 +115,10 @@ let db;
       await db.execute(`
         INSERT INTO Dogs (owner_id, name, size) VALUES
             (1, 'Max', 'medium'),
-            ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
-            ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Jacob', 'large'),
-            ((SELECT user_id FROM Users WHERE username = 'george123'), 'Milo', 'medium'),
-            ((SELECT user_id FROM Users WHERE username = 'george123'), 'Edward', 'medium')
+            (3, 'Bella', 'small'),
+            (3, 'Jacob', 'large'),
+            (5, 'Milo', 'medium'),
+            (5, 'Edward', 'medium')
       `);
       await db.execute(`
         INSERT INTO Users (username, email, password_hash, role) VALUES
