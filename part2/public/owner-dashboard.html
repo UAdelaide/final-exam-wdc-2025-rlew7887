@@ -147,6 +147,7 @@
 
         onMounted(() => {
           loadWalks();
+          loadDogs();
         });
 
         return {
@@ -155,6 +156,7 @@
           message,
           error,
           submitWalkRequest,
+          dogs,
           logout
         };
       }
