@@ -126,7 +126,8 @@ let db;
             (2, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
             (3, '2025-06-10 10:00:00', 45, 'Forks Trail', 'cancelled'),
             (4, '2025-06-09 08:30:00', 30, 'Central Park', 'completed'),
-            (5, '2025-06-11 17:00:00', 60, 'Gardens', 'open')
+            (5, '2025-06-11 17:00:00', 60, 'Gardens', 'open'),
+            
       `);
       await db.execute(`
         INSERT INTO WalkApplications (request_id, walker_id, status) VALUES
