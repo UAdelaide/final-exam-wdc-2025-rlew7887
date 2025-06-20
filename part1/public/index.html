@@ -25,11 +25,17 @@
     createApp({
         data() {
             return {
-                dogImage: ''
+                dogImage: '',
                 count: 0
             };
         },
         methods: {
+            handleClick() {
+                this.count++;
+                if (this.count === 5) {
+                    this.getDog();
+                }
+            },
             getDog() {
             fetch('https://dog.ceo/api/breeds/image/random')
                 .then(res => res.json())
