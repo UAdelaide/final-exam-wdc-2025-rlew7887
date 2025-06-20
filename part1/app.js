@@ -161,7 +161,11 @@ app.get('/api/dogs', async (req, res) => {
 });
 
 // route to return all open walk requests
-app.get('/api/walkrequests/open', async (req, res))
+app.get('/api/walkrequests/open', async (req, res) => {
+    try{
+        const
+    } catch {}
+})
 
 // route to return walker summary
 
