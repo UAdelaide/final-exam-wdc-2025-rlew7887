@@ -137,7 +137,7 @@ let db;
             ('george123', 'george@example.com', 'hashed321', 'owner')
       `);
       await db.execute(`
-        INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, ) VALUES
+        INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
             ('alice123', 'alice@example.com', 'hashed123', 'owner'),
             ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner'),
