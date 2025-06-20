@@ -149,10 +149,11 @@ let db;
 // route to list all dogs
 app.get('/api/dogs', async (req, res) => {
   try {
-    catch (err) {
-    res.status(500).json({ error: 'Failed to fetch books' });
+    
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch dogs' });
   }
-})
+});
 
 // route to return all open walk requests
 
