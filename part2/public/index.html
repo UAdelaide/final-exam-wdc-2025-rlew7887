@@ -75,9 +75,10 @@
           );
           dogs.value = updatedDogs;
         } catch (err) {
-          console.error('Failed to load dogs or images')
+          console.error('Failed to load dogs or images: ', err);
         }
       }
+      
     }).mount('#app');
   </script>
 
