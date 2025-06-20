@@ -82,7 +82,7 @@
             });
             const result = await res.json();
             if (res.ok) {
-              window.location.href = '/'; // redirect to login page
+              window.location.href = '/';
             } else {
               alert(result.error || 'Logout failed');
             }
