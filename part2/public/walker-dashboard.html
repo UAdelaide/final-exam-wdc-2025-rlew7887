@@ -82,7 +82,7 @@
             });
             const result = await res.json();
             if (res.ok) {
-              window.location.href = '/';
+              window.location.href = 'index.html';
             } else {
               alert(result.error || 'Logout failed');
             }
