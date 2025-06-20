@@ -166,7 +166,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
         const [requests] = await db.execute(`
             SELECT
             `);
-        res.json(dogs);
+        res.json(requests);
     } catch {res.status(500).json({ error: 'Failed to fetch walk requests' });}
 });
 
