@@ -61,7 +61,8 @@
 
       async function loadDogPhotos() {
         try {
-          const res = await fetch('/api/')
+          const res = await fetch('/api/users/api/dogs');
+          const dogList = await res.json
         }
       }
     }).mount('#app');
