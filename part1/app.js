@@ -147,6 +147,7 @@ let db;
 })();
 
 // route to list all dogs
+app.get('')
 
 // route to return all open walk requests
 
