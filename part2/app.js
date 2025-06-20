@@ -8,6 +8,11 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'devSecret123',
+  resave: false,
+  saveUninitialized: false
+}));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
