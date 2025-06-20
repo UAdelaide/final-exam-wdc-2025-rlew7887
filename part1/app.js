@@ -146,6 +146,7 @@ let db;
   }
 })();
 
+// rout
 
 app.use(express.static(path.join(__dirname, 'public')));
 
