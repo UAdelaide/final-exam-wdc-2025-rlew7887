@@ -164,8 +164,8 @@ app.get('/api/dogs', async (req, res) => {
 app.get('/api/walkrequests/open', async (req, res) => {
     try{
         const
-    } catch {}
-})
+    } catch {res.status(500).json({ error: 'Failed to fetch walk requests' });}
+});
 
 // route to return walker summary
 
