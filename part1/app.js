@@ -162,7 +162,7 @@ app.get('/api/dogs', async (req, res) => {
 
 // route to return all open walk requests
 app.get('/api/walkrequests/open', async (req, res) => {
-    try{
+    try {
         const [requests] = await db.execute(`
             SELECT r.request_id, d.name AS dog_name, r.requested_time, r.duration_minutes, r.location, u.username AS owner_username
             FROM WalkRequests r
@@ -177,7 +177,9 @@ app.get('/api/walkrequests/open', async (req, res) => {
 });
 
 // route to return walker summary
-app.get('/api/walkers/summary', async (req, res) => )
+app.get('/api/walkers/summary', async (req, res) => {
+    try {} catch {}
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
