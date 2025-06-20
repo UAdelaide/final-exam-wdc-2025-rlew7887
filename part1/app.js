@@ -133,7 +133,7 @@ let db;
             (1, 2, 'pending'),
             (2, 4, 'accepted'),
             (3, 4, 'rejected'),
-            ('sarahwalker', 'sarah@example.com', 'hashed111', 'walker'),
+            (4, 2, ''sarahwalker', 'sarah@example.com', 'hashed111', 'walker'),
             ('george123', 'george@example.com', 'hashed321', 'owner')
       `);
       await db.execute(`
