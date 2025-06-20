@@ -1,13 +1,14 @@
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
-const session = require('express-session');
+const session = require('express-session'); // add to exam page
 
 const app = express();
 
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
+// add this snippet to exam page
 app.use(session({
   secret: process.env.SESSION_SECRET || 'devSecret123',
   resave: false,
