@@ -73,7 +73,7 @@ router.post('/logout', (req, res) => {
   });
 });
 
-// GET dogs
+// GET dogs for dropdown menu
 router.get('/dogs',async (req, res) => {
   if (!req.session.user || req.session.user.role !== 'owner') {
     return res.status(403).json({ error: 'Unauthorized' });
@@ -90,7 +90,7 @@ router.get('/dogs',async (req, res) => {
   }
 });
 
-// route to list all dogs
+// GET dogs for homepage table
 router.get('/api/dogs', async (req, res) => {
   try {
     const [dogs] = await db.execute(`
