@@ -37,7 +37,6 @@ router.get('/me', (req, res) => {
 
 // POST login (updated)
 router.post('/login', async (req, res) => {
-  console.log('Request body:', req.body); // debug line
   const { username, password } = req.body;
   try {
     const [rows] = await db.query(`
@@ -58,7 +57,6 @@ router.post('/login', async (req, res) => {
 
     res.json({ success: true, message: 'Login successful', user: rows[0] });
   } catch (error) {
-    console.error('Login error:', error); // debug line
     res.status(500).json({ error: 'Login failed' });
   }
 });
