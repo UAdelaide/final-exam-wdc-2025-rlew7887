@@ -59,7 +59,6 @@
         const dogs = ref([]);
 
         async function login() {
-          console.log('username:', username.value, 'password:', password.value); // debug line
           try {
             const res = await fetch('/api/users/login', {
               method: 'POST',
