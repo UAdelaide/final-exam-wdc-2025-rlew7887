@@ -58,6 +58,7 @@ router.post('/login', async (req, res) => {
 
     res.json({ success: true, message: 'Login successful', user: rows[0] });
   } catch (error) {
+    console.error('Login error:', error);
     res.status(500).json({ error: 'Login failed' });
   }
 });
@@ -98,7 +99,6 @@ router.get('/dogs', async (req, res) => {
         `);
     res.json(dogs);
   } catch (err) {
-    console.error('Error in /api/users/dogs:', err);
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 });
