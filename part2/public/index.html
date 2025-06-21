@@ -82,7 +82,7 @@
 
         async function loadDogPhotos() {
           try {
-            const res = await fetch('/api/users/api/dogs');
+            const res = await fetch('/api/users/dogs');
             const dogList = await res.json;
             const updatedDogs = await Promise.all(
               dogList.map(async dog => {

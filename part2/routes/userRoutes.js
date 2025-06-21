@@ -91,7 +91,7 @@ router.get('/dogNames',async (req, res) => {
 });
 
 // GET dogs for homepage table
-router.get('/api/dogs', async (req, res) => {
+router.get('/dogs', async (req, res) => {
   try {
     const [dogs] = await db.execute(`
         SELECT d.name AS dog_name, d.size, u.username AS owner_username
