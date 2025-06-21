@@ -74,7 +74,7 @@ router.post('/logout', (req, res) => {
 });
 
 // GET dogs for dropdown menu
-router.get('/dogs',async (req, res) => {
+router.get('/dogNames',async (req, res) => {
   if (!req.session.user || req.session.user.role !== 'owner') {
     return res.status(403).json({ error: 'Unauthorized' });
   }
